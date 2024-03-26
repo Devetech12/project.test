@@ -26,12 +26,33 @@
       font-size: 24px;
       margin-right: 15px;
     }
+    .marquee {
+      position: relative;
+      overflow: hidden;
+      background: #333;
+      color: #fff;
+      padding: 5px;
+    }
+    .marquee span {
+      position: absolute;
+      top: 0;
+      white-space: nowrap;
+      display: block;
+      animation: marquee 20s linear infinite;
+    }
+    @keyframes marquee {
+      0% { left: 100%; }
+      100% { left: -100%; }
+    }
   </style>
 </head>
 <body>
 
+  <div class="marquee">
+    <span>This is a scrolling text. This is a scrolling text. This is a scrolling text. This is a scrolling text. This is a scrolling text.</span>
+  </div>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg bg-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">PT. Murni Cahaya Pratama</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
